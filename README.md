@@ -6,6 +6,7 @@ Library for handling errors in the application based on codes.
 - [Version](#version)
 - [How it works](#how-it-works)
 - [Installation](#installation)
+- [License](#license)
 
 # API response description
 **For processing, the errors must comply with the standard:**
@@ -60,7 +61,7 @@ Example:
  }
 ```
 # Version
-0.0.1
+0.0.3
 
 # How it works
 The library provides a set of source objects for parsing a server response. All presented objects 
@@ -82,4 +83,21 @@ To initialize the ErrorParser, you must pass to the constructor:
 - `getMessage(errorMessage: ErrorMessageEntity)` - returns the processed error
 - `getFirstMessage(errors: Array<ErrorMessageEntity>)` - returns the first processed error from the list
 
+```ruby
+
+```
+
 # Installation
+
+You want to add pod `'ApiErrorParser', '~> version'` similar to the following to your Podfile:
+
+```ruby
+target 'MyApp' do
+  pod 'ApiErrorParser', '~> version'
+end
+```
+Then run a `pod install` inside your terminal, or from `CocoaPods.app`.
+
+# License
+
+ApiErrorParser is released under the MIT license. See [LICENSE](https://github.com/velmie/ios-api-error-parser/blob/0.0.2/LICENSE) for details.

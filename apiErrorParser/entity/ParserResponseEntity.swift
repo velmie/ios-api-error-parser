@@ -5,10 +5,10 @@
 
 import Foundation
 
-class ParserResponseEntity<T> {
+public class ParserResponseEntity<T> {
 
-    let data: T?
-    let errors: Array<ParserMessageEntity>
+    public let data: T?
+    public let errors: Array<ParserMessageEntity>
 
     init(data: T?, errors: Array<ParserMessageEntity>) {
         self.data = data
