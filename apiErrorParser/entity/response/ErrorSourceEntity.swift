@@ -6,18 +6,18 @@
 import Foundation
 import ObjectMapper
 
-class ErrorSourceEntity: Mappable {
+open class ErrorSourceEntity: Mappable {
 
     private(set) var field: String? = nil
 
-    init(field: String? = nil) {
+    public init(field: String? = nil) {
         self.field = field
     }
 
-    required init?(map: Map) {
+    required public init?(map: Map) {
     }
 
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         field <- map["field"]
     }
 }

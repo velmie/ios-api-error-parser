@@ -6,20 +6,20 @@
 import Foundation
 import ObjectMapper
 
-class ApiResponseEntity<T: Mappable>: Mappable {
+open class ApiResponseEntity<T: Mappable>: Mappable {
 
     private(set) var data: T? = nil
     private(set) var errors: Array<ErrorMessageEntity> = []
 
-    init(data: T? = nil, errors: Array<ErrorMessageEntity> = []) {
+    public init(data: T? = nil, errors: Array<ErrorMessageEntity> = []) {
         self.data = data
         self.errors = errors
     }
 
-    required init?(map: Map) {
+    required public init?(map: Map) {
     }
 
-    func mapping(map: Map) {
+    public func mapping(map: Map) {
         data <- map["data"]
         errors <- map["errors"]
     }
