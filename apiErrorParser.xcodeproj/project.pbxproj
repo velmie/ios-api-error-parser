@@ -22,7 +22,7 @@
 		7E586D0722AA6322003A472B /* DataEntity.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E586D0622AA6322003A472B /* DataEntity.swift */; };
 		7E586D0922AA632C003A472B /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E586D0822AA632C003A472B /* Constants.swift */; };
 		7E586D0B22AA634C003A472B /* ErrorParserTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7E586D0A22AA634C003A472B /* ErrorParserTests.swift */; };
-		7E586D0F22AA6DA3003A472B /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E586D0E22AA6DA3003A472B /* test.json */; };
+		7E586D1322AA82A6003A472B /* test.json in Resources */ = {isa = PBXBuildFile; fileRef = 7E586D1222AA82A6003A472B /* test.json */; };
 		C53B9B39FED52CCEC652E634 /* Pods_apiErrorParserTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64A4004FF374F5616A0EF0D7 /* Pods_apiErrorParserTests.framework */; };
 		FF3DD332B41B557B9400B916 /* Pods_apiErrorParser.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5321F76495270213025524D3 /* Pods_apiErrorParser.framework */; };
 /* End PBXBuildFile section */
@@ -58,7 +58,7 @@
 		7E586D0622AA6322003A472B /* DataEntity.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DataEntity.swift; sourceTree = "<group>"; };
 		7E586D0822AA632C003A472B /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
 		7E586D0A22AA634C003A472B /* ErrorParserTests.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = ErrorParserTests.swift; sourceTree = "<group>"; };
-		7E586D0E22AA6DA3003A472B /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; name = test.json; path = ../../../XCodeProjects/errorParser/errorParserTests/test.json; sourceTree = "<group>"; };
+		7E586D1222AA82A6003A472B /* test.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = test.json; sourceTree = "<group>"; };
 		8D5789C504D502329CE23E1F /* Pods-apiErrorParser.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apiErrorParser.release.xcconfig"; path = "Target Support Files/Pods-apiErrorParser/Pods-apiErrorParser.release.xcconfig"; sourceTree = "<group>"; };
 		AE9DA5A922F519AFF2AFD524 /* Pods-apiErrorParserTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apiErrorParserTests.debug.xcconfig"; path = "Target Support Files/Pods-apiErrorParserTests/Pods-apiErrorParserTests.debug.xcconfig"; sourceTree = "<group>"; };
 		C348C8416A18A02098BBBB6A /* Pods-apiErrorParserTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-apiErrorParserTests.release.xcconfig"; path = "Target Support Files/Pods-apiErrorParserTests/Pods-apiErrorParserTests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,7 +113,7 @@
 		1DFD0833113D2A33DD7D7B76 /* apiErrorParserTests */ = {
 			isa = PBXGroup;
 			children = (
-				7E586D0E22AA6DA3003A472B /* test.json */,
+				7E586D1222AA82A6003A472B /* test.json */,
 				7E586D0A22AA634C003A472B /* ErrorParserTests.swift */,
 				7E586D0822AA632C003A472B /* Constants.swift */,
 				7E586D0522AA6322003A472B /* entity */,
@@ -277,7 +277,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				7E586D0F22AA6DA3003A472B /* test.json in Resources */,
+				7E586D1322AA82A6003A472B /* test.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

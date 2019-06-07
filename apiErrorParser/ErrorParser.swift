@@ -6,17 +6,17 @@
 import Foundation
 import ObjectMapper
 
-class ErrorParser {
+public class ErrorParser {
 
-    let errorMessages: Dictionary<String, String>
-    let defaultErrorMessage: String
+    private let errorMessages: Dictionary<String, String>
+    private let defaultErrorMessage: String
 
-    init(errorMessages: Dictionary<String, String>, defaultErrorMessage: String) {
+    public init(errorMessages: Dictionary<String, String>, defaultErrorMessage: String) {
         self.errorMessages = errorMessages
         self.defaultErrorMessage = defaultErrorMessage
     }
 
-    func parse<T: Mappable>(json: [String: Any]) -> ParserResponseEntity<T>? {
+    public func parse<T: Mappable>(json: [String: Any]) -> ParserResponseEntity<T>? {
         if let response = ApiResponseEntity<T>(JSON: json) {
             return ParserResponseEntity(data: response.data, errors: getErrors(errors: response.errors))
         } else {
@@ -24,18 +24,18 @@ class ErrorParser {
         }
     }
 
-    func parse<T>(response: ApiResponseEntity<T>) -> ParserResponseEntity<T> {
+    public func parse<T>(response: ApiResponseEntity<T>) -> ParserResponseEntity<T> {
         return ParserResponseEntity(data: response.data, errors: getErrors(errors: response.errors))
     }
 
-    func getErrors(errors: Array<ErrorMessageEntity>) -> Array<ParserMessageEntity> {
+    public func getErrors(errors: Array<ErrorMessageEntity>) -> Array<ParserMessageEntity> {
         return errors.map({
             ParserMessageEntity(target: $0.target, source: $0.source, code: $0.code,
                     message: getMessage(errorCode: $0.code))
         })
     }
 
-    func getMessage(errorCode: String) -> String {
+    public func getMessage(errorCode: String) -> String {
         if let error = errorMessages[errorCode] {
             return error
         } else {
@@ -43,7 +43,7 @@ class ErrorParser {
         }
     }
 
-    func getMessage(errorMessage: ErrorMessageEntity) -> String {
+    public func getMessage(errorMessage: ErrorMessageEntity) -> String {
         if let error = errorMessages[errorMessage.code] {
             return error
         } else {
@@ -51,7 +51,7 @@ class ErrorParser {
         }
     }
 
-    func getFirstMessage(errors: Array<ErrorMessageEntity>) -> String {
+    public func getFirstMessage(errors: Array<ErrorMessageEntity>) -> String {
         if let error = errors.first {
             return getMessage(errorMessage: error)
         } else {

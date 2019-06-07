@@ -5,12 +5,12 @@
 
 import Foundation
 
-class ParserMessageEntity {
+public class ParserMessageEntity {
 
-    let target: String
-    let source: ErrorSourceEntity?
-    let code: String
-    let message: String
+    public let target: String
+    public let source: ErrorSourceEntity?
+    public let code: String
+    public let message: String
 
     init(target: String, source: ErrorSourceEntity?, code: String, message: String) {
         self.target = target
