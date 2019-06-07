@@ -1,7 +1,7 @@
 Pod::Spec.new do |spec|
 
   spec.name         = "ApiErrorParser"
-  spec.version      = "0.0.1"
+  spec.version      = "0.0.2"
   spec.summary      = "Library for handling errors in the application based on codes"
   spec.homepage     = "https://github.com/velmie/ios-error-parser"
   spec.license      = "MIT"
