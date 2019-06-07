@@ -11,6 +11,7 @@ Pod::Spec.new do |spec|
   spec.source       = { :git => "https://github.com/velmie/ios-error-parser.git", :tag => "#{spec.version}" }
   spec.source_files  = "Classes", "errorParser/**/*.{h,m,swift}"
   spec.public_header_files = "errorParser/**/*.h"
-  spec.library   = "ObjectMapper"
+  spec.dependency 'ObjectMapper', '3.5.0'
+  spec.swift_version = '5.0'
 
 end
