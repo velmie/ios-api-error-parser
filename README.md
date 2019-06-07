@@ -83,7 +83,13 @@ To initialize the ErrorParser, you must pass to the constructor:
 - `getMessage(errorMessage: ErrorMessageEntity)` - returns the processed error
 - `getFirstMessage(errors: Array<ErrorMessageEntity>)` - returns the first processed error from the list
 
-```ruby
+```swift
+
+let parser = ErrorParser(errorMessages: ["no_reps_available": "too_many_repeats".localized,
+                                                     "incorrect_sms_code": "incorrect_sms".localized],
+                                 defaultErrorMessage: "error_something_wrong".localized)
+                                 
+let parserResponse: ParserResponseEntity<DataEntity>? = parser.parse(json: json)
 
 ```
 
